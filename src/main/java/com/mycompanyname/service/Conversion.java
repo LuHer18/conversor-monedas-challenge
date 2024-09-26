@@ -11,12 +11,12 @@ public class Conversion {
     private double result;
     private LocalDateTime conversionDate;
 
-    public Conversion(Currency fromCurrency, Currency toCurrency, double amount, double result, LocalDateTime conversionDate) {
+    public Conversion(Currency fromCurrency, Currency toCurrency, double amount, double result) {
         this.fromCurrency = fromCurrency;
         this.toCurrency = toCurrency;
         this.amount = amount;
         this.result = result;
-        this.conversionDate = conversionDate;
+        this.conversionDate = LocalDateTime.now();
     }
 
     public Currency getFromCurrency() {
