@@ -5,6 +5,5 @@ public enum Currency {
     COP,
     ARS,
     BRL,
-    EUR,
-    GBP
+    EUR
 }
