@@ -37,63 +37,56 @@ public class Main {
             menu = keyboard.nextInt();
 
             switch (menu) {
-                case 1:
+                case 1 -> {
                     conversion = showResultMenu(keyboard, currencyApi, Currency.USD, Currency.COP);
-                    System.out.println(conversion);
+                    System.out.println(conversion.getMessage());
                     conversions.add(conversion);
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     conversion = showResultMenu(keyboard, currencyApi, Currency.COP, Currency.USD);
-                    System.out.println(conversion);
+                    System.out.println(conversion.getMessage());
                     conversions.add(conversion);
-                    break;
-
-                case 3:
+                }
+                case 3 -> {
                     conversion = showResultMenu(keyboard, currencyApi, Currency.USD, Currency.BRL);
-                    System.out.println(conversion);
+                    System.out.println(conversion.getMessage());
                     conversions.add(conversion);
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     conversion = showResultMenu(keyboard, currencyApi, Currency.BRL, Currency.USD);
-                    System.out.println(conversion);
+                    System.out.println(conversion.getMessage());
                     conversions.add(conversion);
-                    break;
-
-                case 5:
+                }
+                case 5 -> {
                     conversion = showResultMenu(keyboard, currencyApi, Currency.USD, Currency.ARS);
-                    System.out.println(conversion);
+                    System.out.println(conversion.getMessage());
                     conversions.add(conversion);
-                    break;
-                case 6:
+                }
+                case 6 -> {
                     conversion = showResultMenu(keyboard, currencyApi, Currency.ARS, Currency.USD);
-                    System.out.println(conversion);
+                    System.out.println(conversion.getMessage());
                     conversions.add(conversion);
-                    break;
-                case 7:
+                }
+                case 7 -> {
                     conversion = showResultMenu(keyboard, currencyApi, Currency.USD, Currency.EUR);
-                    System.out.println(conversion);
+                    System.out.println(conversion.getMessage());
                     conversions.add(conversion);
-                    break;
-                case 8:
+                }
+                case 8 -> {
                     conversion = showResultMenu(keyboard, currencyApi, Currency.EUR, Currency.USD);
-                    System.out.println(conversion);
+                    System.out.println(conversion.getMessage());
                     conversions.add(conversion);
-                    break;
-                case 9:
+                }
+                case 9 -> {
                     System.out.println("Historial de conversiones: ");
-                    if (conversions.isEmpty()){
+                    if (conversions.isEmpty()) {
                         System.out.println("Lista vacía, no ha hecho niguna conversión");
-                    }else{
+                    } else {
                         System.out.println(conversions);
                     }
-                    break;
-
-                case 0:
-                    System.out.println("Saliendo del sistema");
-                    break;
-                default:
-                    System.out.println("Opción incorrecta");
-                    break;
+                }
+                case 0 -> System.out.println("Saliendo del sistema");
+                default -> System.out.println("Opción incorrecta");
             }
         }
 

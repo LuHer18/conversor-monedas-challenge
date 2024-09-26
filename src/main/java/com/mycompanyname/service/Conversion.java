@@ -59,6 +59,10 @@ public class Conversion {
         this.conversionDate = conversionDate;
     }
 
+    public String getMessage(){
+        return "El valor " + amount + " [" + fromCurrency + "] corresponde al valor final de => " + result + " [" + toCurrency + "]";
+    }
+
     @Override
     public String toString() {
         return "{" +
