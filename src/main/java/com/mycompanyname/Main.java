@@ -1,6 +1,7 @@
 package com.mycompanyname;
 
 
+import com.mycompanyname.model.Currency;
 import com.mycompanyname.service.CurrencyApi;
 
 public class Main {
@@ -8,7 +9,7 @@ public class Main {
 
         CurrencyApi currencyApi = new CurrencyApi();
 
-        System.out.println(currencyApi.convertCurrency("COP", "USD",20000));
+        System.out.println(currencyApi.convertCurrency(Currency.COP, Currency.USD,20000.2));
 
 
     }

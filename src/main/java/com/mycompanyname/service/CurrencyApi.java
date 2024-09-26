@@ -1,5 +1,6 @@
 package com.mycompanyname.service;
 
+import com.mycompanyname.model.Currency;
 import io.github.cdimascio.dotenv.Dotenv;
 
 import java.io.IOException;
@@ -21,7 +22,7 @@ public class CurrencyApi {
         this.API_KEY = dotenv.get("API_KEY");
     }
 
-    public String convertCurrency(String from, String to, double amount){
+    public String convertCurrency(Currency from, Currency to, double amount){
 
         String urlSearch = String.format("%s%s/pair/%s/%s/%s",API_URL, API_KEY,from, to, amount);
 
