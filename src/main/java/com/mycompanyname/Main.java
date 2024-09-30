@@ -7,6 +7,7 @@ import com.mycompanyname.service.CurrencyApi;
 
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -22,7 +23,8 @@ public class Main {
         int menu = -1;
 
         System.out.println("*************************************");
-        System.out.println("Bienvenido al conversor de monedas");
+        System.out.println("Bienvenido al conversor de monedas \n");
+
         while (menu != 0) {
             System.out.println("1. Dólar => Peso colombiano");
             System.out.println("2. Peso colombiano => Dolar");
@@ -34,8 +36,13 @@ public class Main {
             System.out.println("8. Euro => Dólar");
             System.out.println("9. Historial");
             System.out.println("0. Salir");
-            menu = keyboard.nextInt();
-
+            try {
+                menu = keyboard.nextInt();
+            }catch (InputMismatchException e){
+                System.out.println("Error, no estas ingresando un número valido");
+                keyboard.next();
+                continue;
+            }
             switch (menu) {
                 case 1 -> {
                     conversion = showResultMenu(keyboard, currencyApi, Currency.USD, Currency.COP);
@@ -78,15 +85,15 @@ public class Main {
                     conversions.add(conversion);
                 }
                 case 9 -> {
-                    System.out.println("Historial de conversiones: ");
+                    System.out.println("Historial de conversiones:\n");
                     if (conversions.isEmpty()) {
                         System.out.println("Lista vacía, no ha hecho niguna conversión");
                     } else {
                         System.out.println(conversions);
                     }
                 }
-                case 0 -> System.out.println("Saliendo del sistema");
-                default -> System.out.println("Opción incorrecta");
+                case 0 -> System.out.println("Saliendo del sistema \n");
+                default -> System.out.println("Opción incorrecta \n");
             }
         }
 

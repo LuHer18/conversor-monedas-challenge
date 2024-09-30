@@ -66,11 +66,11 @@ public class Conversion {
     @Override
     public String toString() {
         return "{" +
-                "fromCurrency=" + fromCurrency +
-                ", toCurrency=" + toCurrency +
-                ", amount=" + amount +
-                ", result=" + result +
-                ", conversionDate=" + conversionDate +
-                '}';
+                "Moenda inicial=" + fromCurrency +
+                ", Moneda final=" + toCurrency +
+                ", Valor inicial=" + amount +
+                ", Resultado=" + result +
+                ", Fecha =" + conversionDate +
+                '}'+ "\n";
     }
 }
