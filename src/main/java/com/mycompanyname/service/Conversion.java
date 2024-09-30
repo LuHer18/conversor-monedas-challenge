@@ -60,17 +60,17 @@ public class Conversion {
     }
 
     public String getMessage(){
-        return "El valor " + amount + " [" + fromCurrency + "] corresponde al valor final de => " + result + " [" + toCurrency + "]";
+        return "El valor " + amount + " [" + fromCurrency + "] corresponde al valor final de => " + result + " [" + toCurrency + "]\n";
     }
 
     @Override
     public String toString() {
         return "{" +
-                "Moenda inicial=" + fromCurrency +
-                ", Moneda final=" + toCurrency +
-                ", Valor inicial=" + amount +
-                ", Resultado=" + result +
-                ", Fecha =" + conversionDate +
+                "Moneda inicial = " + fromCurrency +
+                ", Moneda final = " + toCurrency +
+                ", Valor inicial = " + amount +
+                ", Resultado = " + result +
+                ", Fecha = " + conversionDate +
                 '}'+ "\n";
     }
 }

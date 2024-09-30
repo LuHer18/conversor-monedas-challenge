@@ -26,6 +26,7 @@ public class Main {
         System.out.println("Bienvenido al conversor de monedas \n");
 
         while (menu != 0) {
+            System.out.println("Selecciona una opción del siguiente menú: \n");
             System.out.println("1. Dólar => Peso colombiano");
             System.out.println("2. Peso colombiano => Dolar");
             System.out.println("3. Dólar => Real Brasileño");
@@ -39,7 +40,7 @@ public class Main {
             try {
                 menu = keyboard.nextInt();
             }catch (InputMismatchException e){
-                System.out.println("Error, no estas ingresando un número valido");
+                System.out.println("Error, no estas ingresando un número valido \n");
                 keyboard.next();
                 continue;
             }

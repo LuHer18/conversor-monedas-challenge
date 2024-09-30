@@ -21,7 +21,7 @@ public class ShowResult {
             amount = parseNumber(input, Locale.US);
 
             if (Double.isNaN(amount)){
-                System.out.println("Por favor coloca un valor válido");
+                System.out.println("Por favor coloca un valor válido\n");
             }
 
         }
